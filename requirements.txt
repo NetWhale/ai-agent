@@ -1,0 +1,7 @@
+# AI Agent MVP - MiMo CLI
+# 基于 MiMo API 的 CLI 智能助手
+
+openai>=1.0.0
+rich>=13.0.0
+click>=8.0.0
+python-dotenv>=1.0.0
