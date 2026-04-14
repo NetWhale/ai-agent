@@ -7,17 +7,17 @@ load_dotenv()
 
 
 class Config:
-    # MiMo API 配置
-    API_KEY = os.getenv("MIMO_API_KEY", "")
-    BASE_URL = os.getenv("MIMO_BASE_URL", "https://api.xiaomi.com/mimo/v1")
-    MODEL = os.getenv("MIMO_MODEL", "xiaomi/mimo-v2-pro")
+    # MiniMax API 配置
+    API_KEY = os.getenv("MINIMAX_API_KEY", "")
+    BASE_URL = os.getenv("MINIMAX_BASE_URL", "https://api.minimax.chat/v1")
+    MODEL = os.getenv("MINIMAX_MODEL", "MiniMax-Text-01")
 
     # 对话配置
     MAX_HISTORY = int(os.getenv("MAX_HISTORY", "20"))
     MAX_OUTPUT_TOKENS = int(os.getenv("MAX_OUTPUT_TOKENS", "4096"))
 
     # 系统提示词
-    SYSTEM_PROMPT = """你是一个 AI 编程助手，代号 MiMo Agent。
+    SYSTEM_PROMPT = """你是一个 AI 编程助手。
 你的核心能力：
 1. 理解和分析代码项目
 2. 读写文件、执行命令
@@ -49,7 +49,7 @@ class Config:
     def validate(cls):
         if not cls.API_KEY:
             raise ValueError(
-                "请在 .env 文件中设置 MIMO_API_KEY\n"
+                "请在 .env 文件中设置 MINIMAX_API_KEY\n"
                 "1. 复制 .env.example 为 .env\n"
-                "2. 填入你的 MiMo API Key"
+                "2. 填入你的 MiniMax API Key"
             )

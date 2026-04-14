@@ -96,7 +96,7 @@ class Agent:
             if text_response:
                 self.messages.append({"role": "assistant", "content": text_response})
                 console.print()
-                console.print(Panel(Markdown(text_response), title="🍚 MiMo", border_style="cyan"))
+                console.print(Panel(Markdown(text_response), title="🤖 Agent", border_style="cyan"))
 
             # 执行工具调用
             for tool_call in tool_calls:
@@ -125,7 +125,7 @@ class Agent:
                 if follow_text:
                     self.messages.append({"role": "assistant", "content": follow_text})
                     console.print()
-                    console.print(Panel(Markdown(follow_text), title="🍚 MiMo", border_style="cyan"))
+                    console.print(Panel(Markdown(follow_text), title="🤖 Agent", border_style="cyan"))
 
             # 限制历史长度
             if len(self.messages) > Config.MAX_HISTORY * 2:

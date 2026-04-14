@@ -1,4 +1,4 @@
-"""MiMo Agent - CLI 交互式 AI 助手"""
+"""AI Agent - CLI 交互式 AI 助手"""
 
 import sys
 import click
@@ -13,8 +13,8 @@ console = Console()
 
 BANNER = """
 ╔══════════════════════════════════════╗
-║        🍚 MiMo Agent v0.1           ║
-║   基于 MiMo API 的 CLI 智能助手     ║
+║        🤖 AI Agent v0.1             ║
+║    CLI 智能助手 (MiniMax)           ║
 ╚══════════════════════════════════════╝
 """
 
@@ -33,7 +33,7 @@ HELP_TEXT = """
 @click.option("-d", "--dir", default=".", help="工作目录")
 @click.option("--reset", is_flag=True, help="启动时重置会话")
 def main(dir: str, reset: bool):
-    """MiMo Agent - CLI 交互式 AI 助手"""
+    """AI Agent - CLI 交互式 AI 助手"""
     console.print(Panel(BANNER, border_style="cyan"))
 
     try:
